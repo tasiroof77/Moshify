@@ -45,7 +45,8 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: 600;
 }
 
 p {
@@ -361,10 +362,6 @@ a {
   margin-bottom: 2rem;
 }
 
-.plan--popular {
-  transform: scale(1.1);
-}
-
 .plan--popular .card__header {
   position: relative;
 }
@@ -378,12 +375,9 @@ a {
   right: 5%;
 }
 
-.plan:hover {
-  transform: scale(1.05);
-}
-
+.plan:hover,
 .plan--popular:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 1024px) {
@@ -401,6 +395,14 @@ a {
 
   .plan__description {
     font-size: 1.7rem;
+  }
+
+  .plan--popular {
+    transform: scale(1.1);
+  }
+
+  .plan--popular:hover {
+    transform: scale(1.15);
   }
 }
 
@@ -787,10 +789,35 @@ a {
 /* Plans Block */
 
 .block-plan .grid {
-  gap: 8rem 4rem;
+  gap: 6rem 4rem;
 }
 
 .block-plan .card {
   max-width: 490px;
   margin: 0 auto;
+}
+
+/* Features */
+
+.feature {
+  gap: 4rem 3rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
 }
